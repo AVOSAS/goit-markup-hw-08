@@ -1,0 +1,39 @@
+/* Time-social */
+
+.person-social {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.person-social__link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    fill: #AFB1B8;
+    transition: background-color var(--transition-value);
+
+    &:focus,
+    &:hover {
+    fill: var(--primary-bg-color);
+    background-color: var(--accent-color);
+    }
+}
+
+.icon-logo {
+    display: block;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.person-social__items:not(:last-child) {
+    margin-right: 10px;
+}

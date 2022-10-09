@@ -1,0 +1,130 @@
+/* Шапка сторінки */
+
+.header {
+   border-bottom: 1px solid #ECECEC;
+   max-width: 1600px;
+   margin: 0 auto;
+}
+
+.nav-header {
+   display: flex;
+   align-items: center;
+}
+
+.link-nav {
+   display: flex;
+   align-items: center;
+}
+
+.logo {
+   color: var(--secondary-text-color);
+   font-family: Raleway, sans-serif;
+   font-weight: 700;
+   font-size: 26px;
+   line-height: 1.19;
+   text-decoration: none;
+   padding-top: 24px;
+   padding-bottom: 24px;
+   margin-right: 92px;
+}
+
+.accent {
+   color: var(--accent-color);
+}
+
+.nav {
+   display: flex;
+}
+
+.link-nav .items:not(:last-child) {
+   margin-right: 50px;
+}
+
+.link {
+   display: block;
+   color: var(--primary-text-color);
+   font-weight: 500;
+   line-height: 1.14;
+   letter-spacing: 0.02em;
+   text-decoration: none;
+   padding-top: 32px;
+   padding-bottom: 32px;
+   transition: color var(--transition-value);
+
+   &:hover,
+   &:focus {
+   color: var(--accent-color);
+   }
+}
+
+.svg-list:focus,
+.svg-list:hover,
+.nav-contact a:hover,
+.nav-contact a:focus {
+   color: var(--accent-color);
+}
+
+.link.current::after {
+   content: '';
+   display: block;
+   position: absolute;
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   background: var(--accent-color);
+   bottom: 0;
+   left: 0;
+   opacity: 1;
+}
+
+.nav .link {
+   display: block;
+   position: relative;
+   transition: color var(--transition-value);
+}
+
+
+.nav .link.current {
+   color: var(--accent-color);
+}
+
+.nav-contact {
+   display: flex;
+   margin-left: auto;
+   align-items: center;
+   justify-content: center;
+}
+
+.nav-contact .items+.items {
+   margin-left: 50px;
+}
+
+.nav-contact a {
+   display: flex;
+   color: var(--text-color);
+   font-weight: 500;
+   letter-spacing: 0.02em;
+   line-height: 1.14;
+   text-decoration: none;
+   justify-content: center;
+   align-items: center;
+   transition: color var(--transition-value);
+}
+
+.svg-smartphone {
+   height: 16px;
+   width: 16px;
+   margin-right: 10px;
+   fill: currentColor;
+   justify-content: center;
+   align-items: center;
+}
+
+.svg-envelope {
+   height: 16px;
+   width: 16px;
+   margin-right: 10px;
+   fill: currentColor;
+   align-items: center;
+   justify-content: center;
+}

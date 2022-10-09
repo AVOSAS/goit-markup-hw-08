@@ -1,0 +1,20 @@
+// specific SASS partials
+
+@import "./utils/variables.scss";
+@import "./base/base";
+@import "./utils/visually-hidden";
+@import "./base/container";
+
+@import "./components/header";
+@import "./components/studio";
+@import "./components/backdrop";
+@import "./components/modal-form";
+@import "./components/peculiarity";
+@import "./components/case";
+@import "./components/team";
+@import "./components/time-social";
+@import "./components/clients";
+@import "./components/footer";
+
+@import "./components/portfolio";
+@import "./components/portfolio-projects";
