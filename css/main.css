@@ -117,9 +117,14 @@ img {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 24px;
-  margin-right: 92px;
+  display: block;
 }
 
+@media (min-width: 767px) {
+  .logo {
+    margin-right: 92px;
+  }
+}
 .logo--accent {
   color: var(--accent-color);
 }
