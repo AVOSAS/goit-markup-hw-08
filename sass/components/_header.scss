@@ -40,6 +40,12 @@
 
 .navigation-list {
    display: flex;
+   align-items: center;
+}
+@media (max-width: 767px) {
+   .navigation-list {
+      display: none;
+      }
 }
 
 .navigation-list__items:not(:last-child) {
