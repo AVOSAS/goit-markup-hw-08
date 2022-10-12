@@ -6,15 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Портфоліо</title>
-    <link 
+    <link
         href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet" 
-    />
-    <link 
-        rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" 
-    />
+        rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css" />
     <link rel="stylesheet" href="./css/main.min.css" />
 </head>
+
 <body>
     <!-- Шапка сторінки -->
     <header class="header">
@@ -22,11 +21,72 @@
             <nav class="navigation">
                 <a class="logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
                 <ul class="navigation-list">
-                    <li class="navigation-list__items"><a href="./index.html"
-                            class="link">Студія</a> </li>
-                    <li class="navigation-list__items"><a href="./portfolio.html" class="link navigation-list__items--current">Портфоліо</a> </li>
+                    <li class="navigation-list__items"><a href="./index.html" class="link">Студія</a> </li>
+                    <li class="navigation-list__items"><a href="./portfolio.html"
+                            class="link navigation-list__items--current">Портфоліо</a> </li>
                     <li class="navigation-list__items"><a href="#" class="link">Контакти</a> </li>
                 </ul>
+                <button type="button" class="mobile-btn mobile-btn__js-open" aria-expanded="false" aria-controls="mobile-menu">
+                    <svg class="mobile-btn__icon" width="40" height="40" aria-label="кнопка відкриття мобільного меню">
+                        <use href="./images/icons.svg#icon-mobile-menu"></use>
+                    </svg>
+                </button>
+                <div class="mobile-menu__container mobile-menu__js-container" id="mobile-menu">
+                    <button type="button" class="burger-btn burger-btn__js-close">
+                        <svg class="mobile-btn__icon" width="40" height="40" aria-label="кнопка закриття мобільного меню">
+                            <use href="./images/icons.svg#icon-close-menu"></use>
+                        </svg>
+                    </button>
+                    <div class="mobile-menu__container-top">
+                        <nav class="mobile-menu__nav">
+                            <ul class="list mobile-menu__list">
+                                <li class="mobile-menu__list-item">
+                                    <a class="link mobile-menu__list-item-link"
+                                        href="./index.html">Студія</a>
+                                </li>
+                                <li class="mobile-menu__list-item">
+                                    <a class="link mobile-menu__list-item-link mobile-menu__list-item-link--current" href="./portfolio.html">Портфоліо</a>
+                                </li>
+                                <li class="mobile-menu__list-item">
+                                    <a class="link mobile-menu__list-item-link" href="./index.html">Контакти</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="mobile-menu__container-bottom">
+                        <ul class="list mobile-menu__address-list">
+                            <li class="mobile-menu__tel-item">
+                                <a class="link mobile-menu__tel-link" href="tel:+380961111111">+38 096 111 11 11</a>
+                            </li>
+                            <li class="mobile-menu__mail-item">
+                                <a class="link mobile-menu__mail-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                            </li>
+                        </ul>
+                        <ul class="list mobile-menu__social-list">
+                            <li class="mobile-menu__social-item">
+                                <a class="link mobile-menu__social-link" href="https://www.instagram.com/">Instagram</a>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <div class="mobile-menu__line"></div>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <a class="link mobile-menu__social-link" href="https://twitter.com/">Twitter</a>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <div class="mobile-menu__line"></div>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <a class="link mobile-menu__social-link" href="https://www.facebook.com/">Facebook</a>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <div class="mobile-menu__line"></div>
+                            </li>
+                            <li class="mobile-menu__social-item">
+                                <a class="link mobile-menu__social-link" href="https://www.linkedin.com/">LinkedIn</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             <ul class="navigation-contact">
                 <li class="navigation-contact__items">
@@ -61,171 +121,441 @@
                 <button class="filter-section__btn" type="button">Приложения</button>
                 <button class="filter-section__btn" type="button">Дизайн</button>
                 <button class="filter-section__btn" type="button">Маркетинг</button>
-            </div>            
-            <!-- Проекти -->            
+            </div>
+            <!-- Проекти -->
             <ul class="projects">
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/technokryak.jpg" alt="Технокряк" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>                                
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/technocrack-480@.webp 1x,
+                                ./images/projects/webp/480/technocrack-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/technokryak-480@.jpg 1x,
+                                ./images/projects/jpg/480/technokryak-480@2x.jpg 2x,                                
+                                " />                                
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/technokryak-768@.webp 1x,
+                                ./images/projects/webp/768/technokryak-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/technokryak-768@.jpg 1x,
+                                ./images/projects/jpg/768/technokryak-768@2x.jpg 2x,                                
+                                                            
+                                <source type="image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/technokryak-1200@.webp 1x,
+                                ./images/projects/webp/1200/technokryak-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/technokryak-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/technokryak-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Технокряк" src="./images/projects/jpg/1200/technokryak-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/technokryak-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/technokryak-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>                    
-                    <div class="border">
+                        <div class="border">
                             <h3 class="projects-title">Технокряк</h3>
                             <p class="projects-subtitle">Веб-сайт</p>
-                    </div>
-                    </a>                        
+                        </div>
+                    </a>
                 </li>
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/gs.jpg" alt="Постер New Orlean vs Golden Star" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/gs-480@.webp 1x,
+                                ./images/projects/webp/480/gs-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/gs-480@.jpg 1x,
+                                ./images/projects/jpg/480/gs-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/gs-768@.webp 1x,
+                                ./images/projects/webp/768/gs-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/gs-768@.jpg 1x,
+                                ./images/projects/jpg/768/gs-768@2x.jpg 2x,                                
+                                " />                            
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/gs-1200@.webp 1x,
+                                ./images/projects/webp/1200/gs-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/gs-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/gs-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Постер New Orlean vs Golden Star" src="./images/projects/jpg/1200/gs-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/gs-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/gs-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>                    
-                    <div class="border">
+                        <div class="border">
                             <h3 class="projects-title">Постер New Orlean vs Golden Star</h3>
                             <p class="projects-subtitle">Дизайн</p>
-                    </div>                    
-                    </a>    
-                </li>
-                <li class="projects-items">
-                    <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                        <img src="./images/seafood.jpg" alt="Ресторан Seafood" width="370" height="294" />
-                        <div class="projects-overlay">
-                            <p class="projects-text-overlay">
-                                Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                                відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                            </p>
                         </div>
-                    </div>                    
-                    <div class="border">
-                        <h3 class="projects-title">Ресторан Seafood</h3>
-                        <p class="projects-subtitle">Приложение</p>
-                    </div>
                     </a>
                 </li>
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/prime.jpg" alt="Проект Prime" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/seafood-480@.webp 1x,
+                                ./images/projects/webp/480/seafood-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/seafood-480@.jpg 1x,
+                                ./images/projects/jpg/480/seafood-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/seafood-768@.webp 1x,
+                                ./images/projects/webp/768/seafood-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/seafood-768@.jpg 1x,
+                                ./images/projects/jpg/768/seafood-768@2x.jpg 2x,                                
+                                " />
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/seafood-1200@.webp 1x,
+                                ./images/projects/webp/1200/seafood-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/seafood-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/seafood-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Ресторан Seafood" src="./images/projects/jpg/1200/seafood-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/seafood-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/seafood-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>                    
-                    <div class="border">
-                        <h3 class="projects-title">Проект Prime</h3>
-                        <p class="projects-subtitle">Маркетинг</p>
-                    </div>
+                        <div class="border">
+                            <h3 class="projects-title">Ресторан Seafood</h3>
+                            <p class="projects-subtitle">Приложение</p>
+                        </div>
                     </a>
                 </li>
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/boxes.jpg" alt="Проект Boxes" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/prime-480@.webp 1x,
+                                ./images/projects/webp/480/prime-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/prime-480@.jpg 1x,
+                                ./images/projects/jpg/480/prime-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/prime-768@.webp 1x,
+                                ./images/projects/webp/768/prime-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/prime-768@.jpg 1x,
+                                ./images/projects/jpg/768/prime-768@2x.jpg 2x,                                
+                                " />
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/prime-1200@.webp 1x,
+                                ./images/projects/webp/1200/prime-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/prime-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/prime-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Проект Prime" src="./images/projects/jpg/1200/prime-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/prime-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/prime-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="border">
-                        <h3 class="projects-title">Проект Boxes</h3>
-                        <p class="projects-subtitle">Приложение</p>
-                    </div>
+                        <div class="border">
+                            <h3 class="projects-title">Проект Prime</h3>
+                            <p class="projects-subtitle">Маркетинг</p>
+                        </div>
                     </a>
                 </li>
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/inspiration.jpg" alt="Inspiration has no Borders" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/boxes-480@.webp 1x,
+                                ./images/projects/webp/480/boxes-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/boxes-480@.jpg 1x,
+                                ./images/projects/jpg/480/boxes-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/boxes-768@.webp 1x,
+                                ./images/projects/webp/768/boxes-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/boxes-768@.jpg 1x,
+                                ./images/projects/jpg/768/boxes-768@2x.jpg 2x,                                
+                                " />
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/boxes-1200@.webp 1x,
+                                ./images/projects/webp/1200/boxes-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/boxes-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/boxes-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Проект Boxes" src="./images/projects/jpg/1200/boxes-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/boxes-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/boxes-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="border">
-                        <h3 class="projects-title">Inspiration has no Borders</h3>
-                        <p class="projects-subtitle">Веб-сайт</p>
-                    </div>
+                        <div class="border">
+                            <h3 class="projects-title">Проект Boxes</h3>
+                            <p class="projects-subtitle">Приложение</p>
+                        </div>
                     </a>
                 </li>
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/le.jpg" alt="Издание Limited Edition" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/inspiration-480@.webp 1x,
+                                ./images/projects/webp/480/inspiration-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/inspiration-480@.jpg 1x,
+                                ./images/projects/jpg/480/inspiration-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/inspiration-768@.webp 1x,
+                                ./images/projects/webp/768/inspiration-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/inspiration-768@.jpg 1x,
+                                ./images/projects/jpg/768/inspiration-768@2x.jpg 2x,                                
+                                " />
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/inspiration-1200@.webp 1x,
+                                ./images/projects/webp/1200/inspiration-1200@2x.webp 2x,
+                                " />
+                                <source media="(min-width: 1200px)" srcset="                                
+                                ./images/projects/jpg/1200/inspiration-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/inspiration-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Inspiration has no Borders" src="./images/projects/jpg/1200/inspiration-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/inspiration-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/inspiration-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="border">
-                        <h3 class="projects-title">Издание Limited Edition</h3>
-                        <p class="projects-subtitle">Дизайн</p>
-                    </div>
+                        <div class="border">
+                            <h3 class="projects-title">Inspiration has no Borders</h3>
+                            <p class="projects-subtitle">Веб-сайт</p>
+                        </div>
                     </a>
                 </li>
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/lab.jpg" alt="Проект LAB" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/le-480@.webp 1x,
+                                ./images/projects/webp/480/le-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/le-480@.jpg 1x,
+                                ./images/projects/jpg/480/le-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/le-768@.webp 1x,
+                                ./images/projects/webp/768/le-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/le-768@.jpg 1x,
+                                ./images/projects/jpg/768/le-768@2x.jpg 2x,                                
+                                " />
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/le-1200@.webp 1x,
+                                ./images/projects/webp/1200/le-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/le-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/le-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Издание Limited Edition" src="./images/projects/jpg/1200/le-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/le-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/le-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="border">
-                        <h3 class="projects-title">Проект LAB</h3>
-                        <p class="projects-subtitle">Маркетинг</p>
-                    </div>
+                        <div class="border">
+                            <h3 class="projects-title">Издание Limited Edition</h3>
+                            <p class="projects-subtitle">Дизайн</p>
+                        </div>
                     </a>
                 </li>
                 <li class="projects-items">
                     <a href="#" class="projects-items__link">
-                    <div class="projects-box">
-                    <img src="./images/business.jpg" alt="Growing Business" width="370" height="294" />
-                        <div class="projects-overlay">
-                        <p class="projects-text-overlay">
-                            Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить
-                            відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
-                        </p>
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/lab-480@.webp 1x,
+                                ./images/projects/webp/480/lab-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/lab-480@.jpg 1x,
+                                ./images/projects/jpg/480/lab-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/lab-768@.webp 1x,
+                                ./images/projects/webp/768/lab-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/lab-768@.jpg 1x,
+                                ./images/projects/jpg/768/lab-768@2x.jpg 2x,                                
+                                " />
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/lab-1200@.webp 1x,
+                                ./images/projects/webp/1200/lab-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/lab-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/lab-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Проект LAB" src="./images/projects/jpg/1200/lab-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/lab-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/lab-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="border">
-                        <h3 class="projects-title">Growing Business</h3>
-                        <p class="projects-subtitle">Приложение</p>
-                    </div>
+                        <div class="border">
+                            <h3 class="projects-title">Проект LAB</h3>
+                            <p class="projects-subtitle">Маркетинг</p>
+                        </div>
                     </a>
                 </li>
-            </ul>            
+                <li class="projects-items">
+                    <a href="#" class="projects-items__link">
+                        <div class="projects-box">
+                            <picture>
+                                <source type="image/webp" media="(max-width: 767px)" srcset="
+                                ./images/projects/webp/480/business-480@.webp 1x,
+                                ./images/projects/webp/480/business-480@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 767px)" srcset="
+                                ./images/projects/jpg/480/business-480@.jpg 1x,
+                                ./images/projects/jpg/480/business-480@2x.jpg 2x,                                
+                                " />
+                                <source type="image/webp" media="(max-width: 1199px)" srcset="
+                                ./images/projects/webp/768/business-768@.webp 1x,
+                                ./images/projects/webp/768/business-768@2x.webp 2x,                                
+                                " />
+                                <source media="(max-width: 1199px)" srcset="
+                                ./images/projects/jpg/768/business-768@.jpg 1x,
+                                ./images/projects/jpg/768/business-768@2x.jpg 2x,                                
+                                " />
+                                <source type=" image/webp" media="(min-width: 1200px)" srcset="
+                                ./images/projects/webp/1200/business-1200@.webp 1x,
+                                ./images/projects/webp/1200/business-1200@2x.webp 2x,                                
+                                " />
+                                <source media="(min-width: 1200px)" srcset="
+                                ./images/projects/jpg/1200/business-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/business-1200@2x.jpg 2x,                                
+                                " />
+                                <img alt="Growing Business" src="./images/projects/jpg/1200/business-1200@.jpg" srcset="
+                                ./images/projects/jpg/1200/business-1200@.jpg 1x,
+                                ./images/projects/jpg/1200/business-1200@2x.jpg 2x,                                
+                                ">
+                            </picture>                            
+                            <div class="projects-overlay">
+                                <p class="projects-text-overlay">
+                                    Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все
+                                    це дозволить
+                                    відвідувачу отримати вичерпні відомості про компанію чи приватну особу.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="border">
+                            <h3 class="projects-title">Growing Business</h3>
+                            <p class="projects-subtitle">Приложение</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
         </section>
     </main>
     <!-- Підвал сторінки -->
     <footer class="footer">
-            <section class="container add">
-                <div class="address">
-                    <a class="footer-logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
-                    <address>
+        <section class="container add">
+            <div class="address">
+                <a class="footer-logo" href="./index.html"><span class="logo--accent">Web</span>Studio</a>
+                <address>
                     <ul class="footer-list">
                         <li class="footer-list__items">
                             <a class="footer-list__link" href="https://goo.gl/maps/Uxr8CPiGGKussVzf7" target="_blank"
@@ -240,52 +570,56 @@
                             <a class="footer-list__link" href="tel:+380961111111">+38 096 111 11 11</a>
                         </li>
                     </ul>
-                    </address>
-                </div>
-                <!-- Social -->
-                <div class="social">
-                    <p class="social-title">Приєднуйтесь</p>                
-                    <ul class="footer-social list">
-                        <li class="footer-social__items">
-                            <a href="" class="footer-social__link link">
-                                <svg class="icon-logo">
-                                    <use href="./images/icons.svg#instagram"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social__items">
-                            <a href="" class="footer-social__link link">
-                                <svg class="icon-logo">
-                                    <use href="./images/icons.svg#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social__items">
-                            <a href="" class="footer-social__link link">
-                                <svg class="icon-logo">
-                                    <use href="./images/icons.svg#facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="footer-social__items">
-                            <a href="" class="footer-social__link link">
-                                <svg class="icon-logo">
-                                    <use href="./images/icons.svg#linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="block-email">
-                    <p class="block-email__title">Підпишіться на розсилку</p>
-                    <form>
-                        <label for="user_email"></label>
-                        <input class="block-email__input" type="email" name="email" id="user_email" autofocus placeholder="E-mail" />
-                    
-                        <button class="block-email__btn" type="submit">Підписатися</button>
-                    </form>                        
-                </div>
-            </section>
-        </footer>  
+                </address>
+            </div>
+            <!-- Social -->
+            <div class="social">
+                <p class="social-title">Приєднуйтесь</p>
+                <ul class="footer-social list">
+                    <li class="footer-social__items">
+                        <a href="" class="footer-social__link link">
+                            <svg class="icon-logo">
+                                <use href="./images/icons.svg#instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social__items">
+                        <a href="" class="footer-social__link link">
+                            <svg class="icon-logo">
+                                <use href="./images/icons.svg#twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social__items">
+                        <a href="" class="footer-social__link link">
+                            <svg class="icon-logo">
+                                <use href="./images/icons.svg#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="footer-social__items">
+                        <a href="" class="footer-social__link link">
+                            <svg class="icon-logo">
+                                <use href="./images/icons.svg#linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="block-email">
+                <p class="block-email__title">Підпишіться на розсилку</p>
+                <form>
+                    <label for="user_email"></label>
+                    <input class="block-email__input" type="email" name="email" id="user_email" autofocus
+                        placeholder="E-mail" />
+
+                    <button class="block-email__btn" type="submit">Підписатися</button>
+                </form>
+            </div>
+        </section>
+    </footer>
+    <script src="./js/modal.js"></script>
+    <script defer src="./js/mobile-menu.js"></script>
 </body>
+
 </html>
