@@ -21,11 +21,15 @@
 .clients-title {
     font-weight: 700;
     color: var(--primary-text-color);
-    font-size: 36px;
+    font-size: 28px;
     line-height: 1.67;
     text-align: center;
     margin: 0;
     margin-bottom: 50px;
+
+@media screen and (min-width: 1200px) {
+        font-size: 36px;
+    }
 }
 
 .case-list__labels {
@@ -40,4 +44,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+@media (max-width: 1199px) {
+    .about {
+        display: none;
+    }
 }
