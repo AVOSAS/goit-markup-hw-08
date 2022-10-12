@@ -69,12 +69,6 @@
    }
 }
 
-
-.navigation-contact__link:hover,
-.navigation-contact__link:focus {
-   color: var(--accent-color);
-}
-
 .navigation-list__items--current::after {
    content: '';
    display: block;
@@ -149,6 +143,15 @@
    justify-content: center;
    align-items: center;
    transition: color var(--transition-value);
+   &:hover,
+   &:focus {
+      color: var(--accent-color);
+   }
+
+   @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+   }
 }
 
 .navigation-contact__svg-smartphone {
