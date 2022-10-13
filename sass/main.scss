@@ -1,22 +1,25 @@
 // specific SASS partials
 
-@import "./utils/variables.scss";
-@import "./base/base";
+@import "./utils/variables";
 @import "./utils/visually-hidden";
+@import "./utils/main-wrap";
+
+@import "./base/common";
 @import "./base/container";
+@import "./base/section";
 
-@import "./components/header";
-@import "./components/studio";
-@import "./components/backdrop";
-@import "./components/modal-form";
-@import "./components/peculiarity";
-@import "./components/case";
-@import "./components/team";
-@import "./components/time-social";
-@import "./components/clients";
-@import "./components/footer";
+@import "./components/mobile-menu";
+@import "./components/title";
+@import "./components/logo";
+@import "./components/social-icon";
 
-@import "./components/portfolio";
-@import "./components/portfolio-projects";
-
-@import "./utils/breakpoints";
+@import "./layout/header";
+@import "./layout/hero";
+@import "./layout/modal";
+@import "./layout/modal-form";
+@import "./layout/peculiarities";
+@import "./layout/case";
+@import "./layout/team";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/portfolio";
